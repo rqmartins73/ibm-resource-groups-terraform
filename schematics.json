@@ -35,7 +35,7 @@
         {
           "name": "resource_groups",
           "type": "list(object({ name = string, tags = list(string) }))",
-          "value": "[\n  {\n    name = \"powervs\",\n    tags = [\"environment:powervs\"]\n  },\n  {\n    name = \"vpc\",\n    tags = [\"environment:vpc\"]\n  },\n  {\n    name = \"cos\",\n    tags = [\"environment:cos\"]\n  },\n  {\n    name = \"log\",\n    tags = [\"environment:log\"]\n  }\n]",
+          "value": "[{name=\"powervs\",tags=[\"environment:powervs\"]},{name=\"vpc\",tags=[\"environment:vpc\"]},{name=\"cos\",tags=[\"environment:cos\"]},{name=\"log\",tags=[\"environment:log\"]}]",
           "description": "List of resource groups to create"
         }
       ]
