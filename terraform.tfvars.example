@@ -1,0 +1,152 @@
+##############################################################################
+# IBM Cloud Resource Groups - Example Variables File
+#
+# Copy this file to terraform.tfvars and update with your values
+# Command: cp terraform.tfvars.example terraform.tfvars
+#
+# IMPORTANT: Never commit terraform.tfvars to version control as it contains
+# sensitive information like API keys.
+##############################################################################
+
+##############################################################################
+# IBM Cloud Authentication
+##############################################################################
+
+# Your IBM Cloud API Key
+# Get your API key from: https://cloud.ibm.com/iam/apikeys
+ibmcloud_api_key = "your-ibm-cloud-api-key-here"
+
+##############################################################################
+# Region Configuration
+##############################################################################
+
+# IBM Cloud region for provider configuration
+# Valid regions: us-south, us-east, eu-gb, eu-de, jp-tok, jp-osa, au-syd, ca-tor, br-sao, eu-es
+region = "us-south"
+
+##############################################################################
+# Resource Groups Configuration
+##############################################################################
+
+# Example 1: Simple resource groups with minimal configuration
+resource_groups = [
+  {
+    name = "dev-resource-group"
+    tags = ["environment:dev"]
+  },
+  {
+    name = "prod-resource-group"
+    tags = ["environment:prod"]
+  }
+]
+
+# Example 2: Resource groups with detailed tagging strategy
+# resource_groups = [
+#   {
+#     name = "development-rg"
+#     tags = [
+#       "environment:development",
+#       "team:engineering",
+#       "project:webapp",
+#       "cost-center:eng-001",
+#       "managed-by:terraform"
+#     ]
+#   },
+#   {
+#     name = "staging-rg"
+#     tags = [
+#       "environment:staging",
+#       "team:engineering",
+#       "project:webapp",
+#       "cost-center:eng-001",
+#       "managed-by:terraform"
+#     ]
+#   },
+#   {
+#     name = "production-rg"
+#     tags = [
+#       "environment:production",
+#       "team:engineering",
+#       "project:webapp",
+#       "cost-center:eng-001",
+#       "managed-by:terraform",
+#       "compliance:required"
+#     ]
+#   }
+# ]
+
+# Example 3: Multiple resource groups for different teams/projects
+# resource_groups = [
+#   {
+#     name = "team-alpha-dev"
+#     tags = ["team:alpha", "environment:dev"]
+#   },
+#   {
+#     name = "team-alpha-prod"
+#     tags = ["team:alpha", "environment:prod"]
+#   },
+#   {
+#     name = "team-beta-dev"
+#     tags = ["team:beta", "environment:dev"]
+#   },
+#   {
+#     name = "team-beta-prod"
+#     tags = ["team:beta", "environment:prod"]
+#   },
+#   {
+#     name = "shared-services"
+#     tags = ["team:platform", "type:shared"]
+#   }
+# ]
+
+# Example 4: Resource groups with quota management
+# resource_groups = [
+#   {
+#     name     = "limited-resources-rg"
+#     tags     = ["environment:test", "quota:limited"]
+#     quota_id = "your-quota-id-here"
+#   }
+# ]
+
+# Example 5: Bulk creation for multi-environment setup
+# resource_groups = [
+#   {
+#     name = "project-x-dev"
+#     tags = ["project:x", "env:dev", "owner:team-a"]
+#   },
+#   {
+#     name = "project-x-test"
+#     tags = ["project:x", "env:test", "owner:team-a"]
+#   },
+#   {
+#     name = "project-x-stage"
+#     tags = ["project:x", "env:stage", "owner:team-a"]
+#   },
+#   {
+#     name = "project-x-prod"
+#     tags = ["project:x", "env:prod", "owner:team-a"]
+#   },
+#   {
+#     name = "project-y-dev"
+#     tags = ["project:y", "env:dev", "owner:team-b"]
+#   },
+#   {
+#     name = "project-y-test"
+#     tags = ["project:y", "env:test", "owner:team-b"]
+#   },
+#   {
+#     name = "project-y-stage"
+#     tags = ["project:y", "env:stage", "owner:team-b"]
+#   },
+#   {
+#     name = "project-y-prod"
+#     tags = ["project:y", "env:prod", "owner:team-b"]
+#   }
+# ]
+
+##############################################################################
+# Global Tags (Optional)
+##############################################################################
+
+# Global tags to apply to all resource groups
+# tags = ["managed-by:terraform", "organization:acme-corp"]

@@ -1,0 +1,44 @@
+{
+  "name": "ibm-resource-groups-terraform",
+  "description": "Terraform configuration for creating multiple IBM Cloud Resource Groups in bulk",
+  "type": [
+    "terraform_v1.3"
+  ],
+  "location": "us-south",
+  "resource_group": "default",
+  "tags": [
+    "terraform",
+    "resource-groups",
+    "ibm-cloud",
+    "schematics"
+  ],
+  "template_repo": {
+    "url": "https://github.com/your-org/ibm-resource-groups-terraform"
+  },
+  "template_data": [
+    {
+      "folder": ".",
+      "type": "terraform_v1.3",
+      "variablestore": [
+        {
+          "name": "ibmcloud_api_key",
+          "type": "string",
+          "secure": true,
+          "description": "IBM Cloud API Key for authentication"
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "value": "us-south",
+          "description": "IBM Cloud region"
+        },
+        {
+          "name": "resource_groups",
+          "type": "list(object({ name = string, tags = list(string) }))",
+          "value": "[\n  {\n    \"name\": \"dev-resource-group\",\n    \"tags\": [\"environment:dev\", \"managed-by:terraform\"]\n  },\n  {\n    \"name\": \"prod-resource-group\",\n    \"tags\": [\"environment:prod\", \"managed-by:terraform\"]\n  }\n]",
+          "description": "List of resource groups to create"
+        }
+      ]
+    }
+  ]
+}
