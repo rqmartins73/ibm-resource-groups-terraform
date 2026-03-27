@@ -28,15 +28,23 @@ region = "us-south"
 # Resource Groups Configuration
 ##############################################################################
 
-# Example 1: Simple resource groups with minimal configuration
+# Default resource groups configuration for IBM Cloud infrastructure
 resource_groups = [
   {
-    name = "dev-resource-group"
-    tags = ["environment:dev"]
+    name = "powervs"
+    tags = ["environment:powervs"]
   },
   {
-    name = "prod-resource-group"
-    tags = ["environment:prod"]
+    name = "vpc"
+    tags = ["environment:vpc"]
+  },
+  {
+    name = "cos"
+    tags = ["environment:cos"]
+  },
+  {
+    name = "log"
+    tags = ["environment:log"]
   }
 ]
 

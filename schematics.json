@@ -35,7 +35,7 @@
         {
           "name": "resource_groups",
           "type": "list(object({ name = string, tags = list(string) }))",
-          "value": "[\n  {\n    \"name\": \"dev-resource-group\",\n    \"tags\": [\"environment:dev\", \"managed-by:terraform\"]\n  },\n  {\n    \"name\": \"prod-resource-group\",\n    \"tags\": [\"environment:prod\", \"managed-by:terraform\"]\n  }\n]",
+          "value": "[\n  {\n    \"name\": \"powervs\",\n    \"tags\": [\"environment:powervs\"]\n  },\n  {\n    \"name\": \"vpc\",\n    \"tags\": [\"environment:vpc\"]\n  },\n  {\n    \"name\": \"cos\",\n    \"tags\": [\"environment:cos\"]\n  },\n  {\n    \"name\": \"log\",\n    \"tags\": [\"environment:log\"]\n  }\n]",
           "description": "List of resource groups to create"
         }
       ]

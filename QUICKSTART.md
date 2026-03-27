@@ -43,12 +43,20 @@ In the workspace, go to **Settings** and add these variables:
 ```json
 [
   {
-    "name": "dev-resource-group",
-    "tags": ["environment:dev", "managed-by:terraform"]
+    "name": "powervs",
+    "tags": ["environment:powervs"]
   },
   {
-    "name": "prod-resource-group",
-    "tags": ["environment:prod", "managed-by:terraform"]
+    "name": "vpc",
+    "tags": ["environment:vpc"]
+  },
+  {
+    "name": "cos",
+    "tags": ["environment:cos"]
+  },
+  {
+    "name": "log",
+    "tags": ["environment:log"]
   }
 ]
 ```
@@ -100,12 +108,20 @@ region = "us-south"
 
 resource_groups = [
   {
-    name = "dev-resource-group"
-    tags = ["environment:dev"]
+    name = "powervs"
+    tags = ["environment:powervs"]
   },
   {
-    name = "prod-resource-group"
-    tags = ["environment:prod"]
+    name = "vpc"
+    tags = ["environment:vpc"]
+  },
+  {
+    name = "cos"
+    tags = ["environment:cos"]
+  },
+  {
+    name = "log"
+    tags = ["environment:log"]
   }
 ]
 ```
