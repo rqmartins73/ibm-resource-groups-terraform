@@ -39,7 +39,7 @@ In the workspace, go to **Settings** and add these variables:
 | `region` | string | `us-south` | No |
 | `resource_groups` | list | See example below | No |
 
-**Example resource_groups value:**
+**Example resource_groups value (JSON format for Schematics UI):**
 ```json
 [
   {
@@ -108,19 +108,19 @@ region = "us-south"
 
 resource_groups = [
   {
-    name = "powervs"
+    name = "powervs",
     tags = ["environment:powervs"]
   },
   {
-    name = "vpc"
+    name = "vpc",
     tags = ["environment:vpc"]
   },
   {
-    name = "cos"
+    name = "cos",
     tags = ["environment:cos"]
   },
   {
-    name = "log"
+    name = "log",
     tags = ["environment:log"]
   }
 ]

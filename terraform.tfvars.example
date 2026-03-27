@@ -31,19 +31,19 @@ region = "us-south"
 # Default resource groups configuration for IBM Cloud infrastructure
 resource_groups = [
   {
-    name = "powervs"
+    name = "powervs",
     tags = ["environment:powervs"]
   },
   {
-    name = "vpc"
+    name = "vpc",
     tags = ["environment:vpc"]
   },
   {
-    name = "cos"
+    name = "cos",
     tags = ["environment:cos"]
   },
   {
-    name = "log"
+    name = "log",
     tags = ["environment:log"]
   }
 ]
