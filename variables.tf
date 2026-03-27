@@ -67,6 +67,25 @@ variable "resource_groups" {
     quota_id = optional(string, null)
   }))
 
+  default = [
+    {
+      name = "powervs",
+      tags = ["environment:powervs"]
+    },
+    {
+      name = "vpc",
+      tags = ["environment:vpc"]
+    },
+    {
+      name = "cos",
+      tags = ["environment:cos"]
+    },
+    {
+      name = "log",
+      tags = ["environment:log"]
+    }
+  ]
+
   validation {
     condition     = length(var.resource_groups) > 0
     error_message = "At least one resource group must be defined."
