@@ -21,9 +21,8 @@ provider "ibm" {
 resource "ibm_resource_group" "resource_groups" {
   for_each = { for rg in var.resource_groups : rg.name => rg }
 
-  name  = each.value.name
-  tags  = lookup(each.value, "tags", [])
-  quota_id = lookup(each.value, "quota_id", null)
+  name = each.value.name
+  tags = lookup(each.value, "tags", [])
 }
 
 ##############################################################################

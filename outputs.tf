@@ -31,7 +31,6 @@ output "resource_group_details" {
       name       = rg.name
       state      = rg.state
       tags       = rg.tags
-      quota_id   = rg.quota_id
       created_at = rg.created_at
       updated_at = rg.updated_at
     }

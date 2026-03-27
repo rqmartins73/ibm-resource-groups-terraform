@@ -42,29 +42,27 @@ variable "resource_groups" {
     List of resource groups to create. Each resource group should be defined as an object with the following attributes:
     - name (required): Unique name for the resource group
     - tags (optional): List of tags to apply to the resource group for organization and cost tracking
-    - quota_id (optional): ID of the quota to apply to the resource group
     
     Example:
     resource_groups = [
       {
-        name = "dev-resource-group"
+        name = "dev-resource-group",
         tags = ["environment:dev", "team:engineering", "project:webapp"]
       },
       {
-        name = "prod-resource-group"
+        name = "prod-resource-group",
         tags = ["environment:prod", "team:engineering", "project:webapp"]
       },
       {
-        name = "test-resource-group"
+        name = "test-resource-group",
         tags = ["environment:test", "team:qa"]
       }
     ]
   EOT
 
   type = list(object({
-    name     = string
-    tags     = optional(list(string), [])
-    quota_id = optional(string, null)
+    name = string
+    tags = optional(list(string), [])
   }))
 
   default = [
