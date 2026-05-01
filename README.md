@@ -162,3 +162,9 @@ For issues and questions:
 - [IBM Cloud Resource Groups Documentation](https://cloud.ibm.com/docs/account?topic=account-rgs)
 - [IBM Cloud Schematics Documentation](https://cloud.ibm.com/docs/schematics)
 - [Terraform IBM Cloud Provider](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs)
+---
+## Author
+
+Ricardo Martins  
+IBM Power Technical Leader @ Blue Chip Portugal  
+IBM Champion 2025 | 2026
